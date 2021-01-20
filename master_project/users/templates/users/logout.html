@@ -1,0 +1,21 @@
+{% extends 'expense_control/base.html' %}
+
+
+{% block title%}<title>CDG log Out</title>{% endblock %}
+
+{% block content %}
+
+    <div class="bg-light p-5 rounded-lg m-3">
+       <div class="contet-section">
+           <form method="POST">
+           <fieldset class="form-group">
+           <legend class="border-bottom mb-4">Has cerrado Sesión!</legend>
+            <small class="text-muted">Inicia sesión nuevamente <a class="ml-2" href="{% url 'login' %}">Iniciar</a></small>
+           </fieldset> 
+            </form>
+        </div>
+    </div>
+
+    
+
+{% endblock %}

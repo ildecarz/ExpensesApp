@@ -1,0 +1,19 @@
+{% extends 'expense_control/base.html' %}
+
+{% block title%}<title>CDG Home</title>{% endblock %}
+
+{% block content %}
+
+    <div class="logo">
+        {% for post in posts %}
+        <h1>Usuario: {{ post.nickname }}</h1>
+        <p>Nombre: {{ post.autor }}</p>
+        <p>Nota: {{ post.nota }}</p>
+        <p>Usuario desde: {{ post.fecha|date:"F, Y" }}</p> 
+        <a class="btn btn-primary btn-lg" href="#" role="button">Actualizar</a> 
+        <a class="btn btn-primary btn-lg" href="#" role="button">Eliminar</a>                      
+    {% endfor %}
+
+    </div>
+
+{% endblock %}

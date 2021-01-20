@@ -1,0 +1,31 @@
+{% extends 'expense_control/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title%}<title>CDG Log In</title>{% endblock %}
+
+{% block content %}
+
+    <div class="bg-light p-5 rounded-lg m-3">
+       <div class="contet-section">
+           <form method="POST">
+                {% csrf_token %}
+           <fieldset class="form-group">
+           <legend class="border-bottom mb-4">Inciar sesión</legend>
+                {{ form|crispy }}
+           </fieldset> 
+           <br>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Iniciar</button> 
+                </div>
+            </form>
+        <br>
+
+        <div class="border-top pt-3">
+            <small class="text-muted">No tienes cuanta? <a class="ml-2" href="{% url 'register' %}">Registrate ahora</a></small>
+        </div>
+        </div>
+    </div>
+
+    
+
+{% endblock %}

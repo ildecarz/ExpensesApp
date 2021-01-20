@@ -1,0 +1,19 @@
+{% extends 'expense_control/base.html' %}
+
+{% block title%}<title>CDG detail</title>{% endblock %}
+
+
+
+{% block content %}
+        <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ object.autor.profile.image.url }}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ object.autor }}</a>
+              <small class="text-muted">{{ object.fecha|date:"F d, Y" }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ object.nickname }}</a></h2>
+            <p class="article-content">{{ object.nota }}</p>
+          </div>
+        </article>
+{% endblock content %}
